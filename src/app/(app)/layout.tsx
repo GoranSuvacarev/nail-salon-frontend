@@ -1,5 +1,6 @@
 // src/app/(app)/layout.tsx
 import Navigation from '@/components/layout/Navigation';
+import Footer from '@/components/layout/Footer';
 
 export default function AppLayout({
                                       children,
@@ -7,11 +8,12 @@ export default function AppLayout({
     children: React.ReactNode;
 }) {
     return (
-        <>
+        <div className="min-h-screen flex flex-col">
             <Navigation />
-            <main className="min-h-screen bg-gray-50">
+            <main className="flex-grow bg-gray-50">
                 {children}
             </main>
-        </>
+            <Footer />
+        </div>
     );
 }
