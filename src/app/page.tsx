@@ -3,14 +3,6 @@ import Link from 'next/link';
 import { Calendar, Users, Star, Clock } from 'lucide-react';
 
 export default function HomePage() {
-    // Test if Tailwind is working
-    return (
-        <div className="p-8">
-            <h1 className="text-4xl font-bold text-red-500 bg-blue-200 p-4">
-                Test - This should be large, bold, red text on blue background
-            </h1>
-        </div>
-    );
 
     const features = [
         {

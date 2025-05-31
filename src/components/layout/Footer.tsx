@@ -62,11 +62,11 @@ export default function Footer() {
                         <ul className="space-y-3 text-sm">
                             <li className="flex items-start">
                                 <MapPin className="h-4 w-4 mr-2 mt-0.5 flex-shrink-0" />
-                                <span>123 Beauty Street, Nail City, NC 12345</span>
+                                <span>Juzni Bulevar 86, Beograd</span>
                             </li>
                             <li className="flex items-center">
                                 <Phone className="h-4 w-4 mr-2 flex-shrink-0" />
-                                <span>(555) 123-4567</span>
+                                <span>+381 123456789</span>
                             </li>
                             <li className="flex items-center">
                                 <Mail className="h-4 w-4 mr-2 flex-shrink-0" />
