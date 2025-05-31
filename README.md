@@ -78,5 +78,5 @@ The app uses JWT tokens for authentication with:
 
 ## Backend Repository
 
-Backend API: [https://github.com/yourusername/nail-salon-backend](https://github.com/GoranSuvacarev/nail-salon-backend)
+Backend API: [https://github.com/GoranSuvacarev/nail-salon-backend](https://github.com/GoranSuvacarev/nail-salon-backend)
 
