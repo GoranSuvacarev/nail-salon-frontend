@@ -117,8 +117,8 @@ export default function LoginPage() {
             <div className="mt-8 border-t pt-6">
                 <p className="text-xs text-gray-500 text-center">
                     Test Credentials:<br />
-                    Staff: staff1@nailsalon.com / staff1<br />
-                    Customer: goran2@gmail.com / goran2
+                    Staff: olivia@nailsalon.com / nailsalon<br />
+                    Customer: test@gmail.com / testtest
                 </p>
             </div>
         </div>

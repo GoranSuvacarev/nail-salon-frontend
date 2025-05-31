@@ -40,7 +40,7 @@ export default function HomePage() {
                             Experience luxury nail care with our professional services
                         </p>
                         <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                            <Link href="/register" className="btn-primary px-8 py-3 text-lg">
+                            <Link href="/login" className="btn-primary px-8 py-3 text-lg">
                                 Book Appointment
                             </Link>
                             <Link href="/services" className="btn-secondary px-8 py-3 text-lg">
