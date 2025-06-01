@@ -1,10 +1,9 @@
-// src/components/layout/Navigation.tsx
 'use client';
 
 import Link from 'next/link';
 import { useAuth } from '@/lib/auth';
 import { useRouter } from 'next/navigation';
-import { Calendar, Home, User, LogOut, Menu, X } from 'lucide-react';
+import { LogOut, Menu, X } from 'lucide-react';
 import { useState } from 'react';
 
 export default function Navigation() {
@@ -15,7 +14,10 @@ export default function Navigation() {
     const handleLogout = () => {
         logout();
         router.push('/');
+        setIsMenuOpen(false); // Close mobile menu
     };
+
+    const closeMenu = () => setIsMenuOpen(false);
 
     return (
         <nav className="bg-white shadow-sm border-b border-gray-100">
@@ -40,9 +42,14 @@ export default function Navigation() {
                                     Appointments
                                 </Link>
                                 {user.role === 'STAFF' && (
-                                    <Link href="/dashboard" className="text-gray-700 hover:text-primary-600 transition-colors">
-                                        Dashboard
-                                    </Link>
+                                    <>
+                                        <Link href="/dashboard" className="text-gray-700 hover:text-primary-600 transition-colors">
+                                            Dashboard
+                                        </Link>
+                                        <Link href="/schedule" className="text-gray-700 hover:text-primary-600 transition-colors">
+                                            Schedule
+                                        </Link>
+                                    </>
                                 )}
                                 <Link href="/profile" className="text-gray-700 hover:text-primary-600 transition-colors">
                                     Profile
@@ -71,6 +78,7 @@ export default function Navigation() {
                     <button
                         onClick={() => setIsMenuOpen(!isMenuOpen)}
                         className="md:hidden"
+                        aria-label="Toggle menu"
                     >
                         {isMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
                     </button>
@@ -80,23 +88,42 @@ export default function Navigation() {
                 {isMenuOpen && (
                     <div className="md:hidden py-4 border-t">
                         <div className="flex flex-col space-y-4">
-                            <Link href="/services" className="text-gray-700">Services</Link>
-                            <Link href="/staff" className="text-gray-700">Our Staff</Link>
+                            <Link href="/services" onClick={closeMenu} className="text-gray-700">
+                                Services
+                            </Link>
+                            <Link href="/staff" onClick={closeMenu} className="text-gray-700">
+                                Our Staff
+                            </Link>
                             {user ? (
                                 <>
-                                    <Link href="/appointments" className="text-gray-700">Appointments</Link>
+                                    <Link href="/appointments" onClick={closeMenu} className="text-gray-700">
+                                        Appointments
+                                    </Link>
                                     {user.role === 'STAFF' && (
-                                        <Link href="/dashboard" className="text-gray-700">Dashboard</Link>
+                                        <>
+                                            <Link href="/dashboard" onClick={closeMenu} className="text-gray-700">
+                                                Dashboard
+                                            </Link>
+                                            <Link href="/schedule" onClick={closeMenu} className="text-gray-700">
+                                                Schedule
+                                            </Link>
+                                        </>
                                     )}
-                                    <Link href="/profile" className="text-gray-700">Profile</Link>
+                                    <Link href="/profile" onClick={closeMenu} className="text-gray-700">
+                                        Profile
+                                    </Link>
                                     <button onClick={handleLogout} className="text-gray-700 text-left">
                                         Logout
                                     </button>
                                 </>
                             ) : (
                                 <>
-                                    <Link href="/login" className="text-gray-700">Login</Link>
-                                    <Link href="/register" className="text-gray-700">Sign Up</Link>
+                                    <Link href="/login" onClick={closeMenu} className="text-gray-700">
+                                        Login
+                                    </Link>
+                                    <Link href="/register" onClick={closeMenu} className="text-gray-700">
+                                        Sign Up
+                                    </Link>
                                 </>
                             )}
                         </div>
