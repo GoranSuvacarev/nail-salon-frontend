@@ -1,6 +1,5 @@
-// src/components/layout/Footer.tsx
 import Link from 'next/link';
-import { Facebook, Instagram, Twitter, MapPin, Phone, Mail, Clock } from 'lucide-react';
+import { Facebook, Instagram, Twitter, MapPin, Phone, Mail } from 'lucide-react';
 
 export default function Footer() {
     const currentYear = new Date().getFullYear();

@@ -1,4 +1,3 @@
-// src/components/staff/StaffCard.tsx
 import { User } from '@/types';
 import { User as UserIcon, Mail, Phone } from 'lucide-react';
 

@@ -1,7 +1,6 @@
-// src/components/appointments/AppointmentCard.tsx
 import { Appointment } from '@/types';
 import { format } from 'date-fns';
-import { Calendar, Clock, User, DollarSign, X, CheckCircle } from 'lucide-react';
+import { Calendar, Clock, User, X, CheckCircle } from 'lucide-react';
 
 interface AppointmentCardProps {
     appointment: Appointment;

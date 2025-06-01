@@ -1,4 +1,3 @@
-// src/lib/api/profile.ts
 import axiosInstance from '@/lib/axios';
 import { User, UpdateProfileRequest, ChangePasswordRequest, Appointment } from '@/types';
 

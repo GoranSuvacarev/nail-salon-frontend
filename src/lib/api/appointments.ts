@@ -1,4 +1,3 @@
-// src/lib/api/appointments.ts
 import axiosInstance from '@/lib/axios';
 import { Appointment, AppointmentRequest } from '@/types';
 

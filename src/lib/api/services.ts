@@ -1,4 +1,3 @@
-// src/lib/api/services.ts
 import axiosInstance from '@/lib/axios';
 import { Service, ServiceCategory } from '@/types';
 

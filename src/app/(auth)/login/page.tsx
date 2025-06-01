@@ -1,4 +1,3 @@
-// src/app/(auth)/login/page.tsx
 'use client';
 
 import { useState } from 'react';
@@ -7,7 +6,6 @@ import { useForm } from 'react-hook-form';
 import { yupResolver } from '@hookform/resolvers/yup';
 import * as yup from 'yup';
 import { useAuth } from '@/lib/auth';
-import toast from 'react-hot-toast';
 import { Loader2, Mail, Lock } from 'lucide-react';
 
 const schema = yup.object({

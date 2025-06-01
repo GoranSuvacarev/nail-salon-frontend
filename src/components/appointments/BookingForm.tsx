@@ -1,4 +1,3 @@
-// src/components/appointments/BookingForm.tsx
 'use client';
 
 import { useState, useEffect } from 'react';
@@ -7,7 +6,7 @@ import { yupResolver } from '@hookform/resolvers/yup';
 import * as yup from 'yup';
 import { format, addDays, setHours, setMinutes, startOfMonth, endOfMonth, eachDayOfInterval, isSameMonth, isSameDay, isAfter, isBefore, startOfToday } from 'date-fns';
 import { User, Service } from '@/types';
-import { Loader2, Calendar, Clock, User as UserIcon, ChevronLeft, ChevronRight } from 'lucide-react';
+import { Loader2, Calendar, Clock, ChevronLeft, ChevronRight } from 'lucide-react';
 import toast from 'react-hot-toast';
 
 const schema = yup.object({

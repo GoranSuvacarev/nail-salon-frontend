@@ -1,4 +1,3 @@
-// src/app/(app)/schedule/page.tsx
 'use client';
 
 import { useState, useEffect } from 'react';

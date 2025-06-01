@@ -1,4 +1,3 @@
-// src/components/services/ServiceCard.tsx
 import { Service } from '@/types';
 import { Clock, DollarSign } from 'lucide-react';
 
