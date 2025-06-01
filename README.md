@@ -28,7 +28,7 @@
 - **Notifications**: React Hot Toast
 
 ## Available Scripts
-- 'npm install' - Install dependencies
+- `npm install` - Install dependencies
 - `npm run dev` - Run development server
 
 ## API Integration
